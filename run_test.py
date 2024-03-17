@@ -5,12 +5,12 @@ from test_fnc import test_fnc
 import sqlite3
 
 
-def run_test(words: list, translations: list):
+def run_test(words: list, translations: list, write: bool):
     test = Test(words, translations)
 
     for _ in range(len(test.words)):
-        word, translation, changed_word = test.show_current()
-        result = test_fnc(word, translation, changed_word)
+        word, translation, changed_word = test.show_current(write)
+        result = test_fnc(word, translation, changed_word, write)
         if not result:
             return
         if len(test.words) != 1:

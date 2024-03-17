@@ -12,10 +12,11 @@ class Test:
         self.translations.pop(self.current)
         self.current = randint(0, len(self.words) - 1)
 
-    def show_current(self):
+    def show_current(self, shufle):
         changed = list(self.words[self.current])
-        while changed == list(self.words[self.current]):
-            shuffle(changed)
+        if shufle:
+            while changed == list(self.words[self.current]):
+                shuffle(changed)
         return self.words[self.current], self.translations[self.current], ''.join(changed)
 
 

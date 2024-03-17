@@ -4,7 +4,7 @@ from constants import *
 from test_logic import Test
 
 
-def test_fnc(word, translation, changed_word):
+def test_fnc(word, translation, changed_word, write_or_not: bool):
     pygame.init()
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
 
@@ -58,7 +58,8 @@ def test_fnc(word, translation, changed_word):
         pygame.draw.rect(screen, GREY, (50, 50, 300, 50))
         showing_text = font.render(''.join(text), True, BLACK)
         screen.blit(showing_text, (50, 50))
-        screen.blit(changed_word_text, (50, 150))
+        if write_or_not:
+            screen.blit(changed_word_text, (50, 150))
         screen.blit(translation_text, (50, 250))
 
         if right:

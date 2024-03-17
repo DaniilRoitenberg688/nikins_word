@@ -9,20 +9,16 @@ def main():
 
     pygame.init()
 
-    font = pygame.font.Font(None, 100)
+    font = pygame.font.Font(None, 60)
 
-    text = font.render('start', True, WHITE)
+    text = font.render('Animals', True, WHITE)
+    text1 = font.render('Toys', True, WHITE)
+    text2 = font.render('Multiplication', True, WHITE)
 
     running = True
 
-    db = sqlite3.connect('words_db.sqlite')
+    db = sqlite3.connect('words.db')
     con = db.cursor()
-
-    words = con.execute('SELECT word FROM words').fetchall()
-    translations = con.execute('SELECT translation FROM words').fetchall()
-
-    words = [i[0] for i in words]
-    translations = [i[0] for i in translations]
 
     while running:
         screen.fill(WHITE)
@@ -32,11 +28,37 @@ def main():
 
             if event.type == pygame.MOUSEBUTTONDOWN:
                 x, y = event.pos
-                if 100 <= x <= 300 and 150 <= y <= 250:
-                    run_test(words, translations)
+                if 100 < x < 300 and 30 < y < 100:
+                    words = con.execute('SELECT word FROM animals_and_other').fetchall()
+                    translations = con.execute('SELECT translation FROM animals_and_other').fetchall()
 
-        pygame.draw.rect(screen, BLACK, (100, 150, 200, 100))
-        screen.blit(text, (120, 160))
+                    words = [i[0] for i in words]
+                    translations = [i[0] for i in translations]
+                    run_test(words, translations, True)
+
+                if 50 < x < 350 and 300 < y < 370:
+                    words = con.execute('SELECT word FROM umoj').fetchall()
+                    translations = con.execute('SELECT translation FROM umoj').fetchall()
+                    words = [i[0] for i in words]
+                    translations = [i[0] for i in translations]
+                    run_test(words, translations, False)
+
+                if 130 < x < 260 and 160 < y < 210:
+                    words = con.execute('SELECT word FROM toys').fetchall()
+                    translations = con.execute('SELECT translation FROM toys').fetchall()
+
+                    words = [i[0] for i in words]
+                    translations = [i[0] for i in translations]
+                    run_test(words, translations, True)
+
+        pygame.draw.rect(screen, BLACK, (100, 30, 200, 70))
+        screen.blit(text, (117, 45))
+
+        pygame.draw.rect(screen, BLACK, (130, 160, 130, 70))
+        screen.blit(text1, (148, 175))
+
+        pygame.draw.rect(screen, BLACK, (50, 300, 300, 70))
+        screen.blit(text2, (65, 315))
 
         pygame.display.flip()
 
