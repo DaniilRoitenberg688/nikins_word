@@ -14,6 +14,7 @@ def main():
     text = font.render('Animals', True, WHITE)
     text1 = font.render('Toys', True, WHITE)
     text2 = font.render('Multiplication', True, WHITE)
+    text3 = font.render('Body', True, WHITE)
 
     running = True
 
@@ -28,7 +29,7 @@ def main():
 
             if event.type == pygame.MOUSEBUTTONDOWN:
                 x, y = event.pos
-                if 100 < x < 300 and 30 < y < 100:
+                if 100 < x < 300 and 10 < y < 80:
                     words = con.execute('SELECT word FROM animals_and_other').fetchall()
                     translations = con.execute('SELECT translation FROM animals_and_other').fetchall()
 
@@ -36,14 +37,14 @@ def main():
                     translations = [i[0] for i in translations]
                     run_test(words, translations, True)
 
-                if 50 < x < 350 and 300 < y < 370:
+                if 50 < x < 350 and 210 < y < 280:
                     words = con.execute('SELECT word FROM umoj').fetchall()
                     translations = con.execute('SELECT translation FROM umoj').fetchall()
                     words = [i[0] for i in words]
                     translations = [i[0] for i in translations]
                     run_test(words, translations, False)
 
-                if 130 < x < 260 and 160 < y < 210:
+                if 130 < x < 260 and 110 < y < 180:
                     words = con.execute('SELECT word FROM toys').fetchall()
                     translations = con.execute('SELECT translation FROM toys').fetchall()
 
@@ -51,14 +52,25 @@ def main():
                     translations = [i[0] for i in translations]
                     run_test(words, translations, True)
 
-        pygame.draw.rect(screen, BLACK, (100, 30, 200, 70))
-        screen.blit(text, (117, 45))
+                if 130 < x < 270 and 300 < y < 370:
+                    words = con.execute('SELECT word FROM body').fetchall()
+                    translations = con.execute('SELECT translation FROM body').fetchall()
 
-        pygame.draw.rect(screen, BLACK, (130, 160, 130, 70))
-        screen.blit(text1, (148, 175))
+                    words = [i[0] for i in words]
+                    translations = [i[0] for i in translations]
+                    run_test(words, translations, True)
 
-        pygame.draw.rect(screen, BLACK, (50, 300, 300, 70))
-        screen.blit(text2, (65, 315))
+        pygame.draw.rect(screen, BLACK, (100, 10, 200, 70))
+        screen.blit(text, (117, 25))
+
+        pygame.draw.rect(screen, BLACK, (130, 110, 130, 70))
+        screen.blit(text1, (148, 125))
+
+        pygame.draw.rect(screen, BLACK, (50, 210, 300, 70))
+        screen.blit(text2, (65, 225))
+
+        pygame.draw.rect(screen, BLACK, (130, 300, 140, 70))
+        screen.blit(text3, (147, 315))
 
         pygame.display.flip()
 

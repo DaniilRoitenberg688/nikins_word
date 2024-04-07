@@ -6,13 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6230285b-e83c-422c-a2f0-7dd7b873247c" name="Changes" comment="второй коммит">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/words_db.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/dist/words.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_fnc.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_fnc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_logic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/words_db.sqlite" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708856859925</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="второй коммит">
+      <option name="closed" value="true" />
+      <created>1710678046794</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710678046794</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,7 +198,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Первый коммит" />
-    <MESSAGE value="второй коммит" />
-    <option name="LAST_COMMIT_MESSAGE" value="второй коммит" />
+    <MESSAGE value="третий" />
+    <option name="LAST_COMMIT_MESSAGE" value="третий" />
   </component>
 </project>
