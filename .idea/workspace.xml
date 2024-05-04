@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6230285b-e83c-422c-a2f0-7dd7b873247c" name="Changes" comment="body part 2" />
+    <list default="true" id="6230285b-e83c-422c-a2f0-7dd7b873247c" name="Changes" comment="requirements 2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/words.db" beforeDir="false" afterPath="$PROJECT_DIR$/words.db" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,19 +36,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.main.executor": "Run",
-    "Python.run_test.executor": "Run",
-    "Python.test_fnc.executor": "Run",
-    "Python.test_logic.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/daniil/Desktop/My_works/python_projects/words/dist",
-    "settings.editor.selected.configurable": "preferences.externalTools",
-    "settings.editor.splitter.proportion": "0.24691358"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.run_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_fnc.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_logic.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/daniil/Desktop/My_works/python_projects/words&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.externalTools&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.24691358&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\daniil\Desktop\My_works\python_projects\words\dist" />
@@ -151,7 +155,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-09665e90c3a7-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.15026.15" />
+        <option value="bundled-python-sdk-0509580d9d50-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.14494.241" />
       </set>
     </attachedChunks>
   </component>
@@ -204,7 +208,31 @@
       <option name="project" value="LOCAL" />
       <updated>1712499383878</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="remake">
+      <option name="closed" value="true" />
+      <created>1714503231200</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714503231200</updated>
+    </task>
+    <task id="LOCAL-00007" summary="requirements">
+      <option name="closed" value="true" />
+      <created>1714503518414</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1714503518414</updated>
+    </task>
+    <task id="LOCAL-00008" summary="requirements 2">
+      <option name="closed" value="true" />
+      <created>1714504046717</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1714504046717</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -223,6 +251,9 @@
     <MESSAGE value="третий" />
     <MESSAGE value="body part" />
     <MESSAGE value="body part 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="body part 2" />
+    <MESSAGE value="remake" />
+    <MESSAGE value="requirements" />
+    <MESSAGE value="requirements 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="requirements 2" />
   </component>
 </project>

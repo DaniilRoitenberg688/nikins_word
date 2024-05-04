@@ -15,6 +15,7 @@ def main():
     text1 = font.render('Toys', True, WHITE)
     text2 = font.render('Multiplication', True, WHITE)
     text3 = font.render('Body', True, WHITE)
+    text4 = font.render('Weather', True, WHITE)
 
     running = True
 
@@ -27,6 +28,7 @@ def main():
             if event.type == pygame.QUIT:
                 running = False
 
+            # animals
             if event.type == pygame.MOUSEBUTTONDOWN:
                 x, y = event.pos
                 if 100 < x < 300 and 10 < y < 80:
@@ -37,6 +39,7 @@ def main():
                     translations = [i[0] for i in translations]
                     run_test(words, translations, True)
 
+                # umnoj
                 if 50 < x < 350 and 210 < y < 280:
                     words = con.execute('SELECT word FROM umoj').fetchall()
                     translations = con.execute('SELECT translation FROM umoj').fetchall()
@@ -44,7 +47,8 @@ def main():
                     translations = [i[0] for i in translations]
                     run_test(words, translations, False)
 
-                if 130 < x < 260 and 110 < y < 180:
+                # toys
+                if 15 < x < 145 and 110 < y < 180:
                     words = con.execute('SELECT word FROM toys').fetchall()
                     translations = con.execute('SELECT translation FROM toys').fetchall()
 
@@ -52,6 +56,16 @@ def main():
                     translations = [i[0] for i in translations]
                     run_test(words, translations, True)
 
+                # weather
+                if 170 < x < 395 and 110 < y < 180:
+                    words = con.execute('SELECT word FROM weather').fetchall()
+                    translations = con.execute('SELECT translation FROM weather').fetchall()
+
+                    words = [i[0] for i in words]
+                    translations = [i[0] for i in translations]
+                    run_test(words, translations, True)
+
+                # body
                 if 130 < x < 270 and 300 < y < 370:
                     words = con.execute('SELECT word FROM body').fetchall()
                     translations = con.execute('SELECT translation FROM body').fetchall()
@@ -60,15 +74,23 @@ def main():
                     translations = [i[0] for i in translations]
                     run_test(words, translations, True)
 
+        # animals
         pygame.draw.rect(screen, BLACK, (100, 10, 200, 70))
         screen.blit(text, (117, 25))
 
-        pygame.draw.rect(screen, BLACK, (130, 110, 130, 70))
-        screen.blit(text1, (148, 125))
+        # toys
+        pygame.draw.rect(screen, BLACK, (15, 110, 130, 70))
+        screen.blit(text1, (30, 125))
 
+        # weather
+        pygame.draw.rect(screen, BLACK, (170, 110, 215, 70))
+        screen.blit(text4, (195, 125))
+
+        # multiplications
         pygame.draw.rect(screen, BLACK, (50, 210, 300, 70))
         screen.blit(text2, (65, 225))
 
+        # body
         pygame.draw.rect(screen, BLACK, (130, 300, 140, 70))
         screen.blit(text3, (147, 315))
 
