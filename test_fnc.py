@@ -1,3 +1,5 @@
+import time
+
 import pygame
 
 from constants import *
@@ -8,10 +10,14 @@ def test_fnc(word, translation, changed_word, write_or_not: bool):
     pygame.init()
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
 
-    font = pygame.font.Font(None, 65)
+    font_size = 65
+    if len(word) > 12:
+        font_size = 45
 
-    font1 = pygame.font.Font(None, 65)
-    font2 = pygame.font.Font(None, 65)
+    font = pygame.font.Font(None, font_size)
+
+    font1 = pygame.font.Font(None, font_size)
+    font2 = pygame.font.Font(None, font_size)
 
     continue_font = pygame.font.Font(None, 45)
     continue_text = continue_font.render('continue', True, WHITE)
@@ -40,14 +46,17 @@ def test_fnc(word, translation, changed_word, write_or_not: bool):
                 if event.key == pygame.K_BACKSPACE and not right:
                     if text:
                         text.pop(-1)
-                if event.key == pygame.K_RETURN:
+
+                if right and event.key == pygame.K_RETURN:
+                    running = False
+
+                if not right and event.key == pygame.K_RETURN:
                     if ''.join(text) == word:
                         right = True
                         color = GREEN
+
                     else:
                         color = RED
-                if right and event.key == pygame.K_ESCAPE:
-                    running = False
 
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if right:

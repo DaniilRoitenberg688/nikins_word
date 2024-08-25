@@ -16,6 +16,7 @@ def main():
     text2 = font.render('Multiplication', True, WHITE)
     text3 = font.render('Body', True, WHITE)
     text4 = font.render('Weather', True, WHITE)
+    text5 = font.render('New', True, WHITE)
 
     running = True
 
@@ -66,9 +67,18 @@ def main():
                     run_test(words, translations, True)
 
                 # body
-                if 130 < x < 270 and 300 < y < 370:
+                if 50 < x < 190 and 300 < y < 370:
                     words = con.execute('SELECT word FROM body').fetchall()
                     translations = con.execute('SELECT translation FROM body').fetchall()
+
+                    words = [i[0] for i in words]
+                    translations = [i[0] for i in translations]
+                    run_test(words, translations, True)
+
+                # new
+                if 233 < x < 353 and 300 < y < 370:
+                    words = con.execute('SELECT word FROM new').fetchall()
+                    translations = con.execute('SELECT translation FROM new').fetchall()
 
                     words = [i[0] for i in words]
                     translations = [i[0] for i in translations]
@@ -91,8 +101,15 @@ def main():
         screen.blit(text2, (65, 225))
 
         # body
-        pygame.draw.rect(screen, BLACK, (130, 300, 140, 70))
-        screen.blit(text3, (147, 315))
+        pygame.draw.rect(screen, BLACK, (50, 300, 140, 70))
+        screen.blit(text3, (67, 315))
+
+        # new
+        pygame.draw.rect(screen, BLACK, (233, 300, 120, 70))
+        screen.blit(text5, (250, 315))
+
+
+
 
         pygame.display.flip()
 
