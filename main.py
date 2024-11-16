@@ -42,11 +42,11 @@ def main():
 
                 # umnoj
                 if 50 < x < 350 and 210 < y < 280:
-                    words = con.execute('SELECT word FROM umoj').fetchall()
-                    translations = con.execute('SELECT translation FROM umoj').fetchall()
+                    words = con.execute('SELECT word FROM school').fetchall()
+                    translations = con.execute('SELECT translation FROM school').fetchall()
                     words = [i[0] for i in words]
                     translations = [i[0] for i in translations]
-                    run_test(words, translations, False)
+                    run_test(words, translations, True)
 
                 # toys
                 if 15 < x < 145 and 110 < y < 180:
