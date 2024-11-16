@@ -77,8 +77,8 @@ def main():
 
                 # new
                 if 233 < x < 353 and 300 < y < 370:
-                    words = con.execute('SELECT word FROM new').fetchall()
-                    translations = con.execute('SELECT translation FROM new').fetchall()
+                    words = con.execute('SELECT word FROM unknown').fetchall()
+                    translations = con.execute('SELECT translation FROM unknown').fetchall()
 
                     words = [i[0] for i in words]
                     translations = [i[0] for i in translations]
